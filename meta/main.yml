@@ -2,16 +2,13 @@
 dependencies: []
 
 galaxy_info:
-  role_name: packer-debian
+  role_name: packer_ubuntu
   author: gzeel
-  description: Debian/Ubuntu configuration for Packer.
+  description: Ubuntu configuration for Packer.
   issue_tracker_url: "https://github.com/gzeel/ansible-role-packer_ubuntu"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
-    - name: Debian
-      versions:
-        - all
     - name: Ubuntu
       versions:
         - all
