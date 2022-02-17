@@ -6,6 +6,23 @@
   shell: "apt-get -y install linux-headers-$(uname -r)"
   tags: ['skip_ansible_lint']
 
+- name: Install packages
+  apt:
+    name: "{{ packages }}"
+    state: latest
+  vars:
+    packages:
+    - bash-completion
+    - ccze
+    - curl
+    - git
+    - net-tools
+    - rsync
+    - vim
+    - wget
+    - unzip
+    - openssh-client
+
 # SSH daemon configuration.
 - name: Configure SSH daemon.
   lineinfile:
