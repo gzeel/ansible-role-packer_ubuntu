@@ -57,9 +57,6 @@
 - name: Remove unneeded packages.
   apt:
     name:
-      - ppp
-      - pppconfig
-      - pppoeconf
       - cpp
       - gcc
       - g++
