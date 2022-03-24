@@ -46,12 +46,10 @@
     mode: 0700
 
 - name: Get Vagrant's public key.
-  get_url:
-    url: https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
-    dest: /home/vagrant/.ssh/authorized_keys
-    owner: vagrant
-    group: vagrant
-    mode: 0600
+  ansible.posix.authorized_key:
+    user: vagrant
+    state: present
+    key: https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
 
 # Cleanup tasks.
 - name: Remove unneeded packages.
